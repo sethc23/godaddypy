@@ -145,6 +145,8 @@ class Client(object):
                             and subdomains == r_name )
                         ):
 
+                        logging.info('Preparing to update IP for "{}" subdomain of {}'.format(r_name, domain))
+
                         data = {'data': unicode(ip)}
                         record.update(data)
 
